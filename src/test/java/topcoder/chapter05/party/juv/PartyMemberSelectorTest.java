@@ -4,20 +4,19 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by Juv on 2017-06-14.
+ * @author Juv
+ * @since 2017-06-14
  */
 public class PartyMemberSelectorTest {
     @Test
     public void select() throws Exception {
-       Assert.assertTrue(check(new String[]{"fishing", "gardening", "swimming", "fishing"}
-                , new String[]{"hunting", "fishing", "fishing", "biting"}, 4));
+        String[] first = {"fishing", "gardening", "swimming", "fishing"};
+        String[] second = {"hunting", "fishing", "fishing", "biting"};
+        Assert.assertEquals(4, PartyMemberSelector.select(first, second));
 
-        Assert.assertTrue(check(new String[]{"variety", "diversity", "loquacity", "courtesy"}
-                , new String[]{"talking", "speaking", "discussion", "meeting"}, 1));
+
+        String[] first2 = {"variety", "diversity", "loquacity", "courtesy"};
+        String[] second2 = {"talking", "speaking", "discussion", "meeting"};
+        Assert.assertEquals(1, PartyMemberSelector.select(first2, second2));
     }
-
-    private static boolean check(String[] first, String[] second, int expected) {
-        return expected == PartyMemberSelector.select(first, second);
-    }
-
 }
