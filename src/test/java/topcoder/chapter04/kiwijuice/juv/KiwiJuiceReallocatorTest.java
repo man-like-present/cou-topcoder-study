@@ -44,10 +44,7 @@ public class KiwiJuiceReallocatorTest {
                 .toId(toId)
                 .reallocate();
 
-        if (!Arrays.equals(expected, result)) {
-            return false;
-        }
-        return true;
+        return Arrays.equals(expected, result);
     }
 
 }

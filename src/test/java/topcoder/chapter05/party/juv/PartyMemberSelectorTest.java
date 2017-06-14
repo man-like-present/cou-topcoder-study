@@ -1,9 +1,7 @@
-package topcoder.problem05.juv;
+package topcoder.chapter05.party.juv;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Juv on 2017-06-14.

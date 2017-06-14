@@ -1,4 +1,4 @@
-package topcoder.problem05.juv;
+package topcoder.chapter05.party.juv;
 
 import java.util.*;
 
