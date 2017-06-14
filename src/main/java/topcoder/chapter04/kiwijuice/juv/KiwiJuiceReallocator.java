@@ -1,6 +1,4 @@
-package topcoder.problem04.juv;
-
-import java.util.Arrays;
+package topcoder.chapter04.kiwijuice.juv;
 
 /**
  * Created by Juv on 2017-06-11.

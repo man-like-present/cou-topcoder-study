@@ -1,11 +1,9 @@
-package topcoder.problem04.juv;
+package topcoder.chapter04.kiwijuice.juv;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Juv on 2017-06-14.
