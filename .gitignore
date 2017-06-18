@@ -60,6 +60,7 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 .idea/*.xml
+.idea/*.iml
 
 # Sonarlint plugin
 .idea/sonarlint
@@ -112,3 +113,34 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 # End of https://www.gitignore.io/api/java,gradle,intellij,visualstudiocode
+
+# Get Display gitignore config
+.project
+.project/*
+*.prefs
+.classpath
+.springBeans
+.settings
+.settings/*
+target/
+tmp
+.idea/
+*.iml
+*.ipr
+project/
+.gradle/
+out
+.metadata
+Servers
+classes/
+.sonar/
+sonar-project.*
+*~
+rebel.xml
+buildSrc/
+db-migration/
+contiperf-report/
+bin/
+build/
+*/src/generated/
+.DS_Store

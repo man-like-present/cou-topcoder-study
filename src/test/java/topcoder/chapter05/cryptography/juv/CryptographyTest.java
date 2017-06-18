@@ -3,8 +3,6 @@ package topcoder.chapter05.cryptography.juv;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 /**
  * @author Juv
  * @since 2017-06-14
