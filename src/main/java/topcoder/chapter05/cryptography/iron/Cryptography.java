@@ -5,8 +5,6 @@ import java.util.stream.IntStream;
 
 /**
  * Created by Iron
- *
- * @author wowdaeil@coupang.com
  * @Since 2017. 6. 18..
  */
 public class Cryptography {
