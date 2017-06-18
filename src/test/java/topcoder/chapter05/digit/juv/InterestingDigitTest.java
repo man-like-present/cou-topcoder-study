@@ -3,10 +3,6 @@ package topcoder.chapter05.digit.juv;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
-
-import static org.junit.Assert.*;
-
 /**
  * @author Juv
  * @since 2017-06-14
@@ -20,9 +16,11 @@ public class InterestingDigitTest {
 
         // When
         int[] actual = InterestingDigit.find(base);
+        int[] actual2 = InterestingDigit.find_using_full_scan(base);
 
         // Then
-        Assert.assertTrue(Arrays.equals(expected, actual));
+        Assert.assertArrayEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual2);
     }
 
     @Test
@@ -33,9 +31,11 @@ public class InterestingDigitTest {
 
         // When
         int[] actual = InterestingDigit.find(base);
+        int[] actual2 = InterestingDigit.find_using_full_scan(base);
 
         // Then
-        Assert.assertTrue(Arrays.equals(expected, actual));
+        Assert.assertArrayEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual2);
     }
 
     @Test
@@ -46,9 +46,11 @@ public class InterestingDigitTest {
 
         // When
         int[] actual = InterestingDigit.find(base);
+        int[] actual2 = InterestingDigit.find_using_full_scan(base);
 
         // Then
-        Assert.assertTrue(Arrays.equals(expected, actual));
+        Assert.assertArrayEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual2);
     }
 
     @Test
@@ -59,9 +61,11 @@ public class InterestingDigitTest {
 
         // When
         int[] actual = InterestingDigit.find(base);
+        int[] actual2 = InterestingDigit.find_using_full_scan(base);
 
         // Then
-        Assert.assertTrue(Arrays.equals(expected, actual));
+        Assert.assertArrayEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual2);
     }
 
     @Test
@@ -72,9 +76,11 @@ public class InterestingDigitTest {
 
         // When
         int[] actual = InterestingDigit.find(base);
+        int[] actual2 = InterestingDigit.find_using_full_scan(base);
 
         // Then
-        Assert.assertTrue(Arrays.equals(expected, actual));
+        Assert.assertArrayEquals(expected, actual);
+        Assert.assertArrayEquals(expected, actual2);
     }
 
 }

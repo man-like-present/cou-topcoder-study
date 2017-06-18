@@ -3,7 +3,8 @@ package topcoder.chapter05.party.juv;
 import java.util.*;
 
 /**
- * Created by Juv on 2017-06-11.
+ * @author Juv
+ * @since 2017-06-11
  */
 public class PartyMemberSelector {
 
@@ -12,8 +13,6 @@ public class PartyMemberSelector {
 
         classifyMemberByInterest(first, resultMap);
         classifyMemberByInterest(second, resultMap);
-
-        System.out.println(resultMap);
 
         Optional<Integer> maxNumberOfMember =
                 resultMap.values().stream().map(Set::size).max(Integer::compareTo);

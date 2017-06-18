@@ -6,9 +6,23 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * Created by Juv on 2017-06-14.
+ * @author Juv
+ * @since 2017-06-14
  */
 public class KiwiJuiceReallocatorTest {
+    private static boolean check(
+            int[] capacities, int[] bottles, int[] fromId, int[] toId, int[] expected) {
+
+        int[] result = new KiwiJuiceReallocator()
+                .capacities(capacities)
+                .bottles(bottles)
+                .fromId(fromId)
+                .toId(toId)
+                .reallocate();
+
+        return Arrays.equals(expected, result);
+    }
+
     @Test
     public void reallocate() throws Exception {
         Assert.assertTrue(check(
@@ -32,19 +46,6 @@ public class KiwiJuiceReallocatorTest {
                 new int[]{2, 3, 2, 0, 1},
                 new int[]{0, 1, 1, 3, 2},
                 new int[]{0, 156956, 900000, 856956}));
-    }
-
-    private static boolean check(
-            int[] capacities, int[] bottles, int[] fromId, int[] toId, int[] expected) {
-
-        int[] result = new KiwiJuiceReallocator()
-                .capacities(capacities)
-                .bottles(bottles)
-                .fromId(fromId)
-                .toId(toId)
-                .reallocate();
-
-        return Arrays.equals(expected, result);
     }
 
 }
