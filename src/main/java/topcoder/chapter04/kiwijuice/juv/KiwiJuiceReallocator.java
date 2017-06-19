@@ -1,7 +1,8 @@
 package topcoder.chapter04.kiwijuice.juv;
 
 /**
- * Created by Juv on 2017-06-11.
+ * @author Juv
+ * @since 2017-06-11
  */
 public class KiwiJuiceReallocator {
     // 각 병의 용량

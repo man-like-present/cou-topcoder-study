@@ -60,6 +60,7 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 .idea/*.xml
+.idea/*.iml
 
 # Sonarlint plugin
 .idea/sonarlint
@@ -115,10 +116,12 @@ gradle-app.setting
 
 # Get Display gitignore config
 .project
+.project/*
 *.prefs
 .classpath
 .springBeans
 .settings
+.settings/*
 target/
 tmp
 .idea/
