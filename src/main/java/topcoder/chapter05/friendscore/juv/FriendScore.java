@@ -1,4 +1,4 @@
-package topcoder.chapter05.friendscore;
+package topcoder.chapter05.friendscore.juv;
 
 import java.util.HashSet;
 

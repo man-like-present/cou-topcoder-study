@@ -1,8 +1,8 @@
-package topcoder.chapter05.friendscore;
+package topcoder.chapter05.friendscore.juv;
 
 import org.junit.Assert;
 import org.junit.Test;
-import topcoder.chapter05.friendscore.FriendScore;
+import topcoder.chapter05.friendscore.juv.FriendScore;
 
 /**
  * @author Juv
