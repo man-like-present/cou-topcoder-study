@@ -5,7 +5,6 @@ import java.util.stream.IntStream;
 
 /**
  * Created by Iron
- *
  * @Since 2017. 6. 18..
  */
 public class Cryptography {
@@ -14,12 +13,6 @@ public class Cryptography {
 
     public static void main(String[] args) {
         int[] number = {1000, 999, 998, 997, 996, 995};
-
-        final int[] idx = {0};
-        Long result = Arrays.stream(number)
-                .sorted()
-                .asLongStream()
-                .reduce((left, right) -> (idx[0]++ == 0 ? left + 1 : left) * right).orElse(0L);
 
         Cryptography secure = new Cryptography();
         long encrypt = secure.encrypt(number);
