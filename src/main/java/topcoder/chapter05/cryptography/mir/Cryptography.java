@@ -12,8 +12,7 @@ public class Cryptography {
         }
         list.sort(Integer::compareTo);
         Integer min = list.get(0)+1;
-        list.remove(0);
-        list.add(min);
+        list.add(0, min);
         long result = 1;
         for (Integer integer : list) {
             result *= integer;
