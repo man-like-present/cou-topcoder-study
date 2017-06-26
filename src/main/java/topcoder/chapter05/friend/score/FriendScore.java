@@ -24,7 +24,7 @@ public class FriendScore {
 		}
 		String friend = friends[friendNumber];
 		for (int j = 0; j < friend.length(); j++) {
-			if (friend.charAt(j) == 'Y' && !friendSet.contains(j)) {
+			if (friend.charAt(j) == 'Y' ) {
 				friendSet.add(j);
 				check(friends, j, friendSet, depth+1);
 			}
