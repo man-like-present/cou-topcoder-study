@@ -94,4 +94,42 @@ public class FriendScoreTest {
 
         assertEquals(6, result);
     }
+
+    @Test
+    public void testException1() {
+        String[] input = {"NNN", "NN", "NNN"};
+        int result = friendScore.highestScore(input);
+        System.out.println("## Example Input ##\n=> " + Arrays.toString(input));
+        System.out.println("Return : " + result);
+        System.out.println();
+
+        assertEquals(-1, result);
+    }
+
+    @Test
+    public void testException2() {
+        String[] input = {};
+        int result = friendScore.highestScore(input);
+        System.out.println("## Example Input ##\n=> " + Arrays.toString(input));
+        System.out.println("Return : " + result);
+        System.out.println();
+
+        assertEquals(-1, result);
+    }
+
+    @Test
+    public void testException3() {
+        String[] input = {"N", "N", "N", "N", "N", "N", "N", "N", "N", "N",
+                "N", "N", "N", "N", "N", "N", "N", "N", "N", "N",
+                "N", "N", "N", "N", "N", "N", "N", "N", "N", "N",
+                "N", "N", "N", "N", "N", "N", "N", "N", "N", "N",
+                "N", "N", "N", "N", "N", "N", "N", "N", "N", "N",
+                "N", "N", "N", "N", "N", "N", "N", "N", "N", "N",};
+        int result = friendScore.highestScore(input);
+        System.out.println("## Example Input ##\n=> " + Arrays.toString(input));
+        System.out.println("Return : " + result);
+        System.out.println();
+
+        assertEquals(-1, result);
+    }
 }
