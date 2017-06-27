@@ -1,4 +1,4 @@
-package topcoder.chapter05.friend.score;
+package topcoder.chapter05.friendscore.mir;
 
 import org.junit.Assert;
 import org.junit.Test;
