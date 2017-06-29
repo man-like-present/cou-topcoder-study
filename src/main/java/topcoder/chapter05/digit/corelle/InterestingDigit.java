@@ -1,10 +1,9 @@
 package topcoder.chapter05.digit.corelle;
 
-import java.util.List;
-
+import com.google.common.collect.Lists;
 import org.apache.commons.lang3.time.StopWatch;
 
-import com.google.common.collect.Lists;
+import java.util.List;
 
 /**
  * Created by noblesm on 2017. 6. 17..
