@@ -2,6 +2,7 @@ package topcoder.chapter05.friend.score;
 
 import org.junit.Assert;
 import org.junit.Test;
+import topcoder.chapter05.friendscore.mir.FriendScore;
 
 public class FriendScoreTest {
 	@Test
