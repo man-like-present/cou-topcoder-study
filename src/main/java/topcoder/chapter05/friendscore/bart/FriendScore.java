@@ -1,4 +1,4 @@
-package topcoder.chapter05.friend.bart;
+package topcoder.chapter05.friendscore.bart;
 
 import java.util.HashMap;
 import java.util.List;
