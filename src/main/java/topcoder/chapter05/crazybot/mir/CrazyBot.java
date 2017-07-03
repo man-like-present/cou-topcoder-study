@@ -27,7 +27,7 @@ public class CrazyBot {
         for (int i = 0; i < 4; i++) {
             int nextX = x + direct[i][0];
             int nextY = y + direct[i][1];
-            if (map[nextX][nextY] != true) {
+            if (!map[nextX][nextY]) {
                 map[nextX][nextY] = true;
                 check(nextX, nextY, count + 1, probability * probabilities[i]);
                 map[nextX][nextY] = false;
