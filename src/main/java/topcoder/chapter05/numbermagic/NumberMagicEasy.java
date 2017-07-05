@@ -15,20 +15,19 @@ public class NumberMagicEasy {
     private static final int LENGTH_OF_NUMBER_OF_CARD = 8;
     private static final int NOT_EXIST_NUMBER = 16;
 
+    private static final int[][] CARDS = new int[][]{
+            {1, 2, 3, 4, 5, 6, 7, 8},
+            {1, 2, 3, 4, 9, 10, 11, 12},
+            {1, 2, 5, 6, 9, 10, 13, 14},
+            {1, 3, 5, 7, 9, 11, 13, 15}
+    };
+
     public int theNumber(String answer) {
-        int[][] cards = {
-                {1, 2, 3, 4, 5, 6, 7, 8},
-                {1, 2, 3, 4, 9, 10, 11, 12},
-                {1, 2, 5, 6, 9, 10, 13, 14},
-                {1, 3, 5, 7, 9, 11, 13, 15}
-        };
+        HashMap<Integer, HashSet<Integer>> indexesByNumber = getIndexesByNumber(CARDS);
+        HashSet<Integer> answerIndexes = getAnswerIndexSet(answer);
 
-        return findAnswerNumber(getIndexesByNumber(cards), getAnswerIndexSet(answer));
-    }
-
-    // 15
-    private int findAnswerNumber(HashMap<Integer, HashSet<Integer>> map, HashSet<Integer> answerIndexes) {
-        for (HashMap.Entry<Integer, HashSet<Integer>> each : map.entrySet()) {
+        // 15
+        for (HashMap.Entry<Integer, HashSet<Integer>> each : indexesByNumber.entrySet()) {
             if (answerIndexes.equals(each.getValue())) {
                 return each.getKey();
             }
