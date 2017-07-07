@@ -1,4 +1,4 @@
-package topcoder.chapter05.corporation.salary;
+package topcoder.chapter07.salary.juv;
 
 /**
  * @author Juv
