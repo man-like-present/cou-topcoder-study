@@ -1,7 +1,5 @@
 package topcoder.chapter05.numbermagic.bro;
 
-import java.util.Arrays;
-
 /** * Created with Intellij IDEA_17.
  * cou-topcoder-study
  * for
@@ -15,11 +13,11 @@ public class NumberMagicEasy {
 	private static final int FIRST_INDEX = 1;
 	private static final int THE_TRICKSTER = 16;
 
-	private static final int[][] BICYCLE_CARDS = new int[][] {
-		{ 1, 2, 3, 4, 5, 6, 7, 8 },
-		{ 1, 2, 3, 4, 9, 10, 11, 12 },
-		{ 1, 2, 5, 6, 9, 10, 13, 14 },
-		{ 1, 3, 5, 7, 9, 11, 13, 15 }
+	private static final String[] BICYCLE_CARDS = new String[]{
+		"1, 2, 3, 4, 5, 6, 7, 8,",
+		"1, 2, 3, 4, 9, 10, 11, 12,",
+		"1, 2, 5, 6, 9, 10, 13, 14,",
+		"1, 3, 5, 7, 9, 11, 13, 15,"
 	};
 
 	public int theNumber(String answer) {
@@ -43,8 +41,8 @@ public class NumberMagicEasy {
 	private String getMatchResult(int candidate) {
 		StringBuilder result = new StringBuilder();
 
-		for (int [] eachCard : BICYCLE_CARDS) {
-			if (Arrays.toString(eachCard).contains(String.valueOf(candidate))) {
+		for (String eachCard : BICYCLE_CARDS) {
+			if (eachCard.contains(candidate + ",")) {
 				result.append(YES);
 			} else {
 				result.append(NO);
