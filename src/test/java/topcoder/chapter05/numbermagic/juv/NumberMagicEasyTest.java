@@ -1,9 +1,8 @@
-package topcoder.chapter05.numbermagic;
+package topcoder.chapter05.numbermagic.juv;
 
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import topcoder.chapter05.numbermagic.juv.NumberMagicEasy;
 
 /**
  * @author Juv
