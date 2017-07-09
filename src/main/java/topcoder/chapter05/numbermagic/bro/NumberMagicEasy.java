@@ -53,14 +53,9 @@ public class NumberMagicEasy {
 	}
 
 	private boolean isInvalidAnswer(String userInput) {
-		if (userInput.length() != LENGTH_OF_ANSWER) {
-			System.out.println("Trickster!! You must answer the 4 word.");
-			return true;
-		}
 
-		if (userInput.matches("/[YN]+/")) {
-			// userInput.matches("/[YN]{4}/") 로 한번에 체크했을 경우 메시지는?
-			System.out.println("Trickster!! You must answer the Y or N");
+		if (userInput.matches("/[YN]{4}/")) {
+			System.out.println("Trickster!! You must answer only use the Y or N and max length 4.");
 			return true;
 		}
 
