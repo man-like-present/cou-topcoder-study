@@ -54,7 +54,7 @@ public class FriendScore {
         }
 
         for (String friend : friends) {
-            if (!friend.matches("^[Y|N]+") || friend.length() != friends.length) {
+            if (!friend.matches("[Y|N]+") || friend.length() != friends.length) {
                 return true;
             }
         }

@@ -1,4 +1,4 @@
-package topcoder.chapter05.numbermagic;
+package topcoder.chapter05.numbermagic.juv;
 
 import java.util.HashMap;
 import java.util.HashSet;
