@@ -9,7 +9,6 @@ public class NumberMagicEasy {
 	private static final char YES = 'Y';
 	private static final char NO = 'N';
 
-	private static final int LENGTH_OF_ANSWER = 4;
 	private static final int FIRST_INDEX = 1;
 	private static final int THE_TRICKSTER = 16;
 
