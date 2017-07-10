@@ -5,9 +5,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /** * Created with Intellij IDEA_17.
- * User: Scenestealer / Team_Oslo
- * Date: 2017-07-09
- * Time: 오후 3:33
  * cou-topcoder-study
  * for
  */
