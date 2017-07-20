@@ -1,4 +1,4 @@
-package topcoder.chapter07.chess.metric;
+package topcoder.chapter07.chess.metric.juv;
 
 import java.util.Arrays;
 import java.util.HashMap;
