@@ -8,6 +8,7 @@ import java.util.Map;
 public class CorporationSalary {
 
 	private Map<Integer, SalaryMan> salaryManMap = new HashMap<>();
+
 	private class SalaryMan {
 		private static final int BASE_SALARY = 1;
 
