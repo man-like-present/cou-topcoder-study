@@ -1,8 +1,9 @@
-package topcoder.chapter07.chess.metric;
+package topcoder.chapter07.chess.metric.juv;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import topcoder.chapter07.chess.metric.juv.ChessMetric;
 
 /**
  * @author Juv
