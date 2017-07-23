@@ -13,16 +13,6 @@ public class CorporationSalary {
     public long totalSalary(String[] relations) {
 
         validate(relations);
-
-        /*
-        // calculateSalary()는 for문 사용을 유지하고
-        // stream 사용시 -> 95ms
-        // for 문 사용시  -> 5ms
-        return IntStream.range(0, relations.length)
-                .mapToLong(employeeIndex -> calculateSalary(relations, employeeIndex))
-                .sum();
-        */
-
         long totalSalary = 0L;
         HashMap<Integer, Long> salaries = new HashMap<>();
         for (int employeeIndex = 0; employeeIndex < relations.length; employeeIndex++) {
@@ -45,15 +35,6 @@ public class CorporationSalary {
             }
         }
 
-        /*
-        // totalSalary 구하는 부분 for문 사용 유지하고
-        // for문 사용시 5ms -> stream 사용시 110ms
-        long salary = IntStream.range(0, relation.length)
-                .filter(employeeIndex -> isSubordinate(relation[employeeIndex]))
-                .mapToLong(employeeIndex -> calculateSalary(relations, employeeIndex))
-                .sum();
-        */
-
         salary = salary == 0L ? 1L : salary;
         salaries.put(targetEmployeeIndex, salary);
         return salary;
@@ -66,10 +47,4 @@ public class CorporationSalary {
             throw new IllegalArgumentException("Illegal Input : relation");
         }
     }
-
-    /*
-    private boolean isSubordinate(char c) {
-        return SUBORDINATE == c;
-    }
-    */
 }
