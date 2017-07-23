@@ -33,23 +33,25 @@ public class ChessMetric {
 		long[][][] movesMatrix = new long[size][size][numMoves+1];
 		movesMatrix[start[X_POSITION]][start[Y_POSITION]][0] = 1;
 
-		this.djReCurLetsGetIt(start[X_POSITION], start[Y_POSITION], size, 1, numMoves, movesMatrix);
+		for (int move = 1 ; move <= numMoves ; move++) {
+			for (int xPosition = start[X_POSITION] ; xPosition < size ; xPosition++) {
+				for (int yPosition = start[Y_POSITION] ; yPosition < size ; yPosition++) {
+					this.djDaQLetsGetIt(xPosition, yPosition, size, move, movesMatrix);
+				}
+			}
+		}
 
 		return movesMatrix[end[X_POSITION]][end[Y_POSITION]][numMoves];
 	}
 
-	private void djReCurLetsGetIt(int xPosition, int yPosition, int size, int nowMoves, int maxMoves, long[][][] movesMatrix) {
-		if (nowMoves > maxMoves || !this.isInMatrix(xPosition, yPosition, size)) {
-			return;
-		}
-
+	private void djDaQLetsGetIt(int xPosition, int yPosition, int size, int nowMoves, long[][][] movesMatrix) {
+		// 재귀로 할 경우 반복 수가 기하 급수적으로 증가 한다.
 		for (int[] kingKnightMove : kingKnightMoves) {
 			int movedX = xPosition + kingKnightMove[X_POSITION];
 			int movedY = yPosition + kingKnightMove[Y_POSITION];
 
 			if (this.isInMatrix(movedX, movedY, size)) {
 				movesMatrix[movedX][movedY][nowMoves] += movesMatrix[xPosition][yPosition][nowMoves-1];
-				this.djReCurLetsGetIt(movedX, movedY, size, nowMoves+1, maxMoves, movesMatrix);
 			}
 		}
 	}
