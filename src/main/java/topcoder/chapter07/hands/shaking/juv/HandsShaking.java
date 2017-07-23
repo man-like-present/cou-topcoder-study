@@ -1,4 +1,4 @@
-package topcoder.chapter07.hands.shaking;
+package topcoder.chapter07.hands.shaking.juv;
 
 import java.util.HashMap;
 

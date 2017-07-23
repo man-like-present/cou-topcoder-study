@@ -1,8 +1,9 @@
-package topcoder.chapter07.hands.shaking;
+package topcoder.chapter07.hands.shaking.juv;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import topcoder.chapter07.hands.shaking.juv.HandsShaking;
 
 /**
  * @author Juv
