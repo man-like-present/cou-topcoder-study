@@ -32,7 +32,7 @@ public class StockHistory {
                 investmentPrice += monthlyContribution;
             }
         }
-        return (int) result - investmentPrice;
+        return (int) Math.round(result - investmentPrice);
     }
 
     private int[][] getIntegerArray(String[] stockPrices) {
