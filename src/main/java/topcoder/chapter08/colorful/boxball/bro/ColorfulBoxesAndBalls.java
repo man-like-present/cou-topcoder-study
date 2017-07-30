@@ -27,6 +27,7 @@ public class ColorfulBoxesAndBalls {
 		int i = INIT_VALUE;
 		int result = (onlyRed * numRed) + (onlyBlue * numBlue);
 
+		// 증감분이 음수일 경우 더 계산할 필요가 없다
 		while ((diffRedAndBoth + diffBlueAndBoth) > 0) {
 			int tempResult = (onlyRed * (numRed - i)) + (onlyBlue * (numBlue - i)) + (bothColors * (i * 2));
 
