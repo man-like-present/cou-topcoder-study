@@ -14,7 +14,7 @@ public class ColorfulBoxesAndBalls {
 	private static final int MIN_VALUE = -1000;
 	private static final int MAX_VALUE = 1000;
 
-	private static final int INIT_VALUE = 0;
+	private static final int INTEGER_ZERO = 0;
 
 	public int getMaximum(int numRed, int numBlue, int onlyRed, int onlyBlue, int bothColors) {
 		if (this.isInvalidInput(numRed, numBlue, onlyRed, onlyBlue, bothColors)) {
@@ -24,11 +24,11 @@ public class ColorfulBoxesAndBalls {
 		int diffRedAndBoth = bothColors - onlyRed;
 		int diffBlueAndBoth = bothColors - onlyBlue;
 
-		int i = INIT_VALUE;
+		int i = INTEGER_ZERO;
 		int result = (onlyRed * numRed) + (onlyBlue * numBlue);
 
 		// 증감분이 음수일 경우 더 계산할 필요가 없다
-		while ((diffRedAndBoth + diffBlueAndBoth) > 0) {
+		while ((diffRedAndBoth + diffBlueAndBoth) > INTEGER_ZERO) {
 			int tempResult = (onlyRed * (numRed - i)) + (onlyBlue * (numBlue - i)) + (bothColors * (i * 2));
 
 			if (!this.isMaximumResult(i++, numRed, numBlue, tempResult, result)) {
@@ -42,7 +42,7 @@ public class ColorfulBoxesAndBalls {
 	}
 
 	private boolean isMaximumResult(int i, int numRed, int numBlue, int tempResult, int result) {
-		return numRed - i < INIT_VALUE || numBlue - i < INIT_VALUE || tempResult < result;
+		return numRed - i < INTEGER_ZERO || numBlue - i < INTEGER_ZERO || tempResult < result;
 	}
 
 	private boolean isInvalidInput(int numRed, int numBlue, int onlyRed, int onlyBlue, int bothColors) {
