@@ -21,7 +21,7 @@ public class ColorfulBoxesAndBalls {
         red[0] = numRed;
         red[1] = onlyRed;
 
-        int maxNum, minCount;
+        int maxNum = 0, minCount = 0;
         // bothColors 음수일 때 처리 (*2)
         if (blue[1] + red[1] < bothColors * 2) {
             minCount = Math.min(blue[0], red[0]);

@@ -22,7 +22,7 @@ public class StockHistoryTest {
 	}
 
 	@Test
-	public void stockHistory_case0() throws Exception {
+	public void testExample1() throws Exception {
 
 		int initialInvestment = 1000;
 		int monthlyContribution = 0;
@@ -44,7 +44,7 @@ public class StockHistoryTest {
 	}
 
 	@Test
-	public void stockHistory_case1() throws Exception {
+	public void testExample2() throws Exception {
 
 		int initialInvestment = 1000;
 		int monthlyContribution = 0;
@@ -66,7 +66,7 @@ public class StockHistoryTest {
 	}
 
 	@Test
-	public void stockHistory_case2() throws Exception {
+	public void testExample3() throws Exception {
 	
 		int initialInvestment = 100;
 		int monthlyContribution = 20;
