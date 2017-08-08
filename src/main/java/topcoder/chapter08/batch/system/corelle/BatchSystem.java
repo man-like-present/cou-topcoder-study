@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
+import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import org.apache.commons.lang3.ArrayUtils;
@@ -22,7 +23,10 @@ public class BatchSystem {
 	}
 
 	private void print(int[] duration, String[] user) {
+		Stopwatch started = Stopwatch.createStarted();
 		System.out.println(ArrayUtils.toString(schedule(duration, user)));
+		System.out.printf(started.toString());
+		System.out.println("\n");
 	}
 
 	public int[] schedule(int[] duration, String[] user) {
@@ -58,29 +62,29 @@ public class BatchSystem {
 		private int totalDuration;
 		private List<Integer> ids = Lists.newArrayList();
 
-		public Task(String userName, int totalDuration, List<Integer> ids) {
+		Task(String userName, int totalDuration, List<Integer> ids) {
 			this.userName = userName;
 			this.totalDuration = totalDuration;
 			this.ids = ids;
 		}
 
-		public void addDuration(int duration) {
+		void addDuration(int duration) {
 			totalDuration += duration;
 		}
 
-		public void addIds(int id) {
+		void addIds(int id) {
 			ids.add(id);
 		}
 
-		public String getUserName() {
+		String getUserName() {
 			return userName;
 		}
 
-		public int getTotalDuration() {
+		int getTotalDuration() {
 			return totalDuration;
 		}
 
-		public List<Integer> getIds() {
+		List<Integer> getIds() {
 			return ids;
 		}
 	}
