@@ -10,7 +10,7 @@ public class AutoLoan {
 	}
 
 	public double interestRate(double price, double monthlyPayment, int loanTerm) {
-		double maxRate = 100;
+		double maxRate = 1;
 		double minRate = 0;
 		double pivotRate = 0;
 
@@ -20,7 +20,7 @@ public class AutoLoan {
 			pivotRate = (maxRate + minRate) / 2;
 
 			for (int j = 0; j < loanTerm; j++) {
-				balance *= (pivotRate / 1200) + 1;
+				balance *= (pivotRate / 12) + 1;
 				balance -= monthlyPayment;
 			}
 
@@ -31,6 +31,6 @@ public class AutoLoan {
 			}
 		}
 
-		return pivotRate;
+		return pivotRate * 100;
 	}
 }
